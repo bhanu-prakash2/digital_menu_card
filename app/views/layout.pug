@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title #{title || 'Digital Menu Card'}
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+
+    header
+      h2 Digital Menu Card
+
+      if loggedIn
+        p
+          | Logged in as User ID: #{uid}
+        a(href="/test") Dashboard |
+        a(href="/logout") Logout
+      else
+        a(href="/login") Login |
+        a(href="/register") Register
+
+    hr
+
+    main
+      block content
+
+    hr
+
+    footer
+      p © 2025 Digital Menu Card

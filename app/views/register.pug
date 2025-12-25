@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Register
+
+  form(method="POST", action="/set-password")
+    div
+      label Username
+      input(type="text", name="username", required)
+
+    div
+      label Email
+      input(type="email", name="email", required)
+
+    div
+      label Password
+      input(type="password", name="password", required)
+
+    button(type="submit") Create Account
+
+  p
+    | Already have an account?
+    a(href="/login") Login here
